@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<policies>
-  <policy policyType="mondaydotcom" policyName="mondaydotcom1" policyTemplate="online_v1_basic">
-    <credentialName>CompletePolicyProject_mondaydotcom1</credentialName>
-    <applicationVersion>v1</applicationVersion>
-    <applicationType>online</applicationType>
-    <authenticationMethod>BASIC</authenticationMethod>
-  </policy>
-</policies>

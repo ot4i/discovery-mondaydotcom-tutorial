@@ -1,0 +1,385 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "items": {
+    "type": "object",
+    "properties": {
+      "board_folder_id": {
+        "title": "Board folder id",
+        "description": "The board's folder unique identifier.",
+        "type": "number"
+      },
+      "board_kind": {
+        "title": "Privacy",
+        "description": "Possible values are public / private / share",
+        "enum": [
+          "public",
+          "private",
+          "share"
+        ],
+        "type": "string"
+      },
+      "columns": {
+        "title": "Columns",
+        "description": "The board's visible columns.",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "archived": {
+              "title": "Archived",
+              "description": "Is the column archived or not.",
+              "type": "boolean"
+            },
+            "description": {
+              "title": "Description",
+              "description": "The column's description.",
+              "type": "string"
+            },
+            "id": {
+              "title": "Id",
+              "description": "The column's unique identifier.",
+              "type": "string"
+            },
+            "settings_str": {
+              "title": "Settings str",
+              "description": "The column's settings in a string form.",
+              "type": "string"
+            },
+            "title": {
+              "title": "Title",
+              "description": "The column's title.",
+              "type": "string"
+            },
+            "attr_type": {
+              "title": "Type",
+              "description": "The column's type.",
+              "type": "string"
+            },
+            "width": {
+              "title": "Width",
+              "description": "The column's width.",
+              "type": "number"
+            }
+          },
+          "additionalProperties": false
+        },
+        "additionalItems": false
+      },
+      "communication": {
+        "title": "Communication",
+        "description": "Get the board communication value - typically meeting ID",
+        "type": "string"
+      },
+      "creator": {
+        "title": "Creator",
+        "description": "The creator of the board.",
+        "type": "object",
+        "properties": {
+          "birthday": {
+            "title": "Birthday",
+            "description": "The user's birthday.",
+            "type": "string",
+            "format": "date-time"
+          },
+          "country_code": {
+            "title": "Country code",
+            "description": "The user's country code.",
+            "type": "string"
+          },
+          "created_at": {
+            "title": "Created at",
+            "description": "The user's creation date.",
+            "type": "string",
+            "format": "date-time"
+          },
+          "current_language": {
+            "title": "Current language",
+            "description": "The current user's language",
+            "type": "string"
+          },
+          "email": {
+            "title": "Email",
+            "description": "The user's email.",
+            "type": "string"
+          },
+          "enabled": {
+            "title": "Enabled",
+            "description": "Is the user enabled or not.",
+            "type": "boolean"
+          },
+          "encrypt_api_token": {
+            "title": "Encrypt api token",
+            "description": "The token of the user for email to board.",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "description": "The user's unique identifier.",
+            "type": "number"
+          },
+          "is_admin": {
+            "title": "Is admin",
+            "description": "Is the user an account admin.",
+            "type": "boolean"
+          },
+          "is_guest": {
+            "title": "Is guest",
+            "description": "Is the user a guest or not.",
+            "type": "boolean"
+          },
+          "is_pending": {
+            "title": "Is pending",
+            "description": "Is the user a pending user",
+            "type": "boolean"
+          },
+          "is_verified": {
+            "title": "Is verified",
+            "description": "Is user verified his email.",
+            "type": "boolean"
+          },
+          "is_view_only": {
+            "title": "Is view only",
+            "description": "Is the user a view only user or not.",
+            "type": "boolean"
+          },
+          "join_date": {
+            "title": "Join date",
+            "description": "The date the user joined the account.",
+            "type": "string",
+            "format": "date-time"
+          },
+          "last_activity": {
+            "title": "Last activity",
+            "description": "Last date & time when user was active",
+            "type": "string",
+            "format": "date-time"
+          },
+          "location": {
+            "title": "Location",
+            "description": "The user's location.",
+            "type": "string"
+          },
+          "mobile_phone": {
+            "title": "Mobile phone",
+            "description": "The user's mobile phone number.",
+            "type": "string"
+          },
+          "name": {
+            "title": "Name",
+            "description": "The user's name.",
+            "type": "string"
+          },
+          "phone": {
+            "title": "Phone",
+            "description": "The user's phone number.",
+            "type": "string"
+          },
+          "photo_original": {
+            "title": "Photo original",
+            "description": "The user's photo in the original size.",
+            "type": "string"
+          },
+          "photo_small": {
+            "title": "Photo small",
+            "description": "The user's photo in small size (150x150).",
+            "type": "string"
+          },
+          "photo_thumb": {
+            "title": "Photo thumb",
+            "description": "The user's photo in thumbnail size (100x100).",
+            "type": "string"
+          },
+          "photo_thumb_small": {
+            "title": "Photo thumb small",
+            "description": "The user's photo in small thumbnail size (50x50).",
+            "type": "string"
+          },
+          "photo_tiny": {
+            "title": "Photo tiny",
+            "description": "The user's photo in tiny size (30x30).",
+            "type": "string"
+          },
+          "sign_up_product_kind": {
+            "title": "Sign up product kind",
+            "description": "The product to which the user signed up to first.",
+            "type": "string"
+          },
+          "time_zone_identifier": {
+            "title": "Time zone identifier",
+            "description": "The user's timezone identifier.",
+            "type": "string"
+          },
+          "title": {
+            "title": "Title",
+            "description": "The user's title.",
+            "type": "string"
+          },
+          "url": {
+            "title": "Url",
+            "description": "The user's profile url.",
+            "type": "string"
+          },
+          "utc_hours_diff": {
+            "title": "Utc hours diff",
+            "description": "The user’s utc hours difference.",
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": {
+        "title": "Description",
+        "description": "The board's description.",
+        "type": "string"
+      },
+      "id": {
+        "title": "ID",
+        "description": "The unique identifier of the board",
+        "type": "number"
+      },
+      "item_terminology": {
+        "title": "Item terminology",
+        "description": "The Board's item nickname, one of a predefined set of values, or a custom user value",
+        "type": "string"
+      },
+      "items_count": {
+        "title": "Items count",
+        "description": "The number of items on the board",
+        "type": "number"
+      },
+      "name": {
+        "title": "Name",
+        "description": "The name of the board",
+        "type": "string"
+      },
+      "permissions": {
+        "title": "Permissions",
+        "description": "The board's permissions.",
+        "type": "string"
+      },
+      "state": {
+        "title": "State",
+        "description": "Possible values are all / active / archived / deleted. Default is active.",
+        "enum": [
+          "all",
+          "active",
+          "archived",
+          "deleted"
+        ],
+        "type": "string"
+      },
+      "tags": {
+        "title": "Tags",
+        "description": "The board's specific tags.",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "color": {
+              "title": "Color",
+              "description": "The tag's color.",
+              "type": "string"
+            },
+            "id": {
+              "title": "Id",
+              "description": "The tag's unique identifier.",
+              "type": "number"
+            },
+            "name": {
+              "title": "Name",
+              "description": "The tag's name.",
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "additionalItems": false
+      },
+      "attr_type": {
+        "title": "Type",
+        "description": "The board object type. The possible values are board, sub_items_board, or document.",
+        "enum": [
+          "board",
+          "sub_items_board",
+          "document"
+        ],
+        "type": "string"
+      },
+      "views": {
+        "title": "Views",
+        "description": "The board's views.",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "title": "Id",
+              "description": "The view's unique identifier.",
+              "type": "string"
+            },
+            "name": {
+              "title": "Name",
+              "description": "The view's name.",
+              "type": "string"
+            },
+            "settings_str": {
+              "title": "Settings str",
+              "description": "The view's settings in a string form.",
+              "type": "string"
+            },
+            "attr_type": {
+              "title": "Type",
+              "description": "The view's type.",
+              "type": "string"
+            },
+            "view_specific_data_str": {
+              "title": "View specific data str",
+              "description": "Specific board view data (supported only for forms)",
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "additionalItems": false
+      },
+      "workspace": {
+        "title": "Workspace",
+        "description": "The workspace that contains this board (null for main workspace).",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "title": "Created at",
+            "description": "The workspace's creation date.",
+            "type": "string",
+            "format": "date-time"
+          },
+          "description": {
+            "title": "Description",
+            "description": "The workspace's description.",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "description": "The workspace's unique identifier.",
+            "type": "number"
+          },
+          "name": {
+            "title": "Name",
+            "description": "The workspace's name.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "workspace_id": {
+        "title": "Workspace id",
+        "description": "The board's workspace unique identifier (null for main workspace).",
+        "type": "number"
+      }
+    },
+    "title": "Board",
+    "additionalProperties": false
+  },
+  "type": "array",
+  "title": "Board"
+}
